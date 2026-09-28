@@ -1,23 +1,58 @@
 aid: bink
 name: Bink
-description: 'Bink is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+image: http://binkmade.com/cdn/shop/files/bink-water-bottle_18_b62efef8-7bc3-467a-bf53-cc886803debd.jpg?v=1774478359
+description: Bink is a consumer brand focused on high‑quality, reusable glass water bottles and related accessories. Founded in 2021, the company
+  emphasizes sustainable design, wellness, and functional aesthetics, offering a range of products such as stainless‑steel bottles, glass bottles,
+  and custom drinkware for everyday use.
 url: https://raw.githubusercontent.com/api-evangelist/bink/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-09-28'
 modified: '2026-09-28'
 tags:
 - Company
-apis: []
+- Consumer Goods
+- Sustainable
+- Water Bottles
+- E-commerce
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/bink-llms.txt
+- type: WellKnown
+  url: well-known/bink-well-known.yml
+- type: Hosts
+  url: hosts/bink-hosts.yml
+- type: Vendors
+  url: vendors/bink-vendors.yml
+- type: TermsOfService
+  url: https://binkmade.com/policies/terms-of-service
+- type: PrivacyPolicy
+  url: https://binkmade.com/policies/privacy-policy
+- type: Newsroom
+  url: https://binkmade.com/blogs/news
+- type: DomainSecurity
+  url: security/bink-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bink
+  url: https://binkmade.com
+- type: Documentation
+  url: https://binkmade.com/pages/about-bink
+apis:
+- name: Bink GraphQL API
+  description: GraphQL API for Bink consumer brand.
+  humanURL: https://binkmade.com/api/graphql
+  baseURL: https://binkmade.com/api
+  aid: bink:bink-graphql-api
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
